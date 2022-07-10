@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Budgety</title>
+</head>
+<body>
+    <main>
+        <section id="display-top">
+             <div class="text-container">
+                <p>Available Budget in July 2022 : </p>
+                <h2 id="total-available">0.00</h2>  
+            </div>
+            <div class="alert-container">
+
+                <div class="alert" id="income">
+                    <span>INCOME</span>
+                    <div id="income-value">
+                        <p>+00.00</p>
+                        <div class="percent">%00.00</div>
+                    </div>
+                </div>
+                <div class="alert" id="expenses">
+                    <span>EXPENSES</span>
+                    <div id="expenses-value">
+                        <p>-00.00</p>
+                        <div class="percent">%00.00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="control">
+              <form action="#" class="control" >
+                <select  id="option">
+                    <option value="+">income</option>
+                    <option value="-">expenses</option>
+                </select>
+                <input type="text" placeholder="Add description" size="50" class="description">
+                <input type="text" placeholder="Value" class="value" >
+                <button type="submit" class="valid">
+                    <img src="valid.svg" alt="valid button">
+                </button>
+                <!-- <img src="valid.svg" alt="valid button"> -->
+              </form>
+        </section>
+        <section id="display-bottom">
+            <div id="i-table" class="income-table hide-table">
+                <table>
+                    <tr>
+                        <td class="income-head" >
+                            INCOME
+                        </td>
+                    </tr>
+                     <!-- <tr>
+                        <td>
+                           <div class="element">
+                                <span class="element-desc" style="flex: 0 0 65%;">Website Project</span>
+                                <span class="element-value inc">+2,000.00</span>
+                                <img src="icon-x-inc.svg" alt="x icon" class="delete">    
+                           </div>
+                        </td>
+                    </tr>  -->
+                   <!-- <tr>
+                        <td>
+                            <div class="element">
+                                <span class="element-desc">Sold Car</span>
+                                <span class="element-value inc">+20,000.00</span>
+
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="element">
+                                <span class="element-desc">Sold Car</span>
+                                <span class="element-value inc">+20,000.00</span>
+                                <span class="delete inc"></span>
+
+                              </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="element">
+                                <span class="element-desc">Sold Car</span>
+                                <span class="element-value inc">+20,000.00</span>
+                                <span class="delete inc"></span>
+
+                              </div>
+                        </td>
+                    </tr> -->
+                </table>
+            </div>
+            <div id="e-table" class="expenses-table hide-table">
+                <table>
+                    <tr>
+                        <td class="expenses-head">EXPENSES</td>
+                    </tr>
+                    <!-- <tr>
+                        <td>
+                            <div class="element">
+                                <span class="element-desc" style="flex:0 0 55%;">Rent</span>
+                                 
+                                    <span class="element-value exp" >-5,000.00
+                                         <div class="percent">65%</div>
+                                    </span>
+                                   
+                                    <img src="icon-x-exp.svg" alt="x icon" class="delete">
+                                
+                            </div>
+                        </td>
+                    </tr> -->
+                    <!--<tr>
+                        <td>
+                            <div class="element">
+                                <span class="element-desc">Groceries</span>
+                                <div>
+                                    <span class="element-value exp">-800.00</span>
+                                    <div class="percent">65%</div>
+                                    <span class="delete exp"></span>
+                                </div>
+                              </div>
+                        </td>
+                    </tr> -->
+                </table>
+            </div>
+
+        </section>
+    </main>
+     <script src="app.js"></script>
+</body>
+</html>

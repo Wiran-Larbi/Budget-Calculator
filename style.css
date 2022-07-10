@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*,*::before,*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+    text-decoration: none;
+}
+/*! This is Style For the Display-Top Pannel   */
+main #display-top {
+    width: 100vw;
+    height: 260px;
+    filter:brightness(90%) ;
+    background-image: url('background.jpg');
+    background-position-y: 85%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+main #display-top .text-container{
+    padding-top: 3%;
+    padding-bottom: 2%;
+    
+}
+main #display-top .text-container p{
+    font-size: .9rem;
+    font-weight: 300;
+    letter-spacing: .6px;
+    color: hsl(0, 0%, 98%);
+}
+#total-available{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px inset hsl(0, 0%, 48%);
+    letter-spacing: 6px;
+    color: hsl(0, 0%, 95%);
+    padding-top: 4.8%;
+    padding-bottom: 8%;
+}
+main #display-top .alert-container{
+   
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+    
+}
+main #display-top .alert-container .alert{
+    box-shadow: 1px 1px 2px inset hsl(0, 10%, 5%);
+    border-radius: 2px;
+    opacity: .95;
+    padding: 12px;
+    color: hsl(0, 0%, 18%);
+    font-size: .8rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#income{
+    background-color: hsl(179, 100%, 30%);   
+}
+#income #income-value p{
+    color: hsl(0, 0%, 98%);
+    font-weight: 200;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+#income #income-value .percent{
+    display: inline;
+    color: transparent;
+    font-weight: 400;
+    border: none;
+    padding: 2px 4px;
+    margin-left: 0;
+    border-radius: 4px;
+    background-color: transparent;
+    box-shadow: none;
+}
+#expenses{
+    background-color: #FF0000;   
+
+}
+#expenses #expenses-value p{
+    color: hsl(0, 0%, 98%);
+    font-weight: 200;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+#expenses #expenses-value .percent{
+    display: inline;
+    color: hsl(0, 0%, 98%);
+    font-weight: 400;
+    padding: 2px 4px;
+    margin-left: 0;
+    border-radius: 4px;
+    background-color: hsl(0, 100%, 64%);
+    border: 1px solid hsl(0, 100%, 70%);
+    box-shadow: 1px 1px 4px hsl(0, 100%, 42%);
+}
+.percent{
+    display: inline;
+    color: hsl(0, 100%, 40%);
+    font-weight: 500;
+    font-size: .73rem;
+    text-align: center;
+    margin-left: 10px;
+    padding: 1px 2px;
+    border-radius: 4px;
+    background-color: hsl(0, 100%, 88%);
+    border: 1px solid hsl(0, 100%, 86%);
+    box-shadow: 1px 1px 2px inset hsl(0, 100%, 82%);
+    
+}
+
+/*! This is Style For the Controll Pannel   */
+::placeholder{
+    font-weight: 300;
+}
+#option option{
+    font-weight: 300;
+}
+#control{
+    width: 100vw;
+    height: 60px;
+    background-color: hsl(0, 0%, 95%);
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+    box-shadow: 0px 1px 2px hsl(0, 0%, 90%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#control .control{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+#control .control #option{
+    font-family: 'Roboto', sans-serif;
+    font-size: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+    border: 1px solid hsl(0, 0%, 90%);
+    padding: .6rem .2rem;
+    border-radius: 4px;
+    color: hsl(0, 0%, 55%);
+    outline: none;
+    box-shadow: 1px 1px 0px inset hsl(0, 0%, 85%);
+    transition: border 140ms ease-out;
+    cursor: pointer;
+}
+#control .control #option:focus{
+   border: 1px solid hsl(280, 2%, 55%);
+}
+
+#control .control .description{
+    padding: .6rem .8rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: normal;
+    font-weight: 400;
+    color: hsl(0, 0%, 25%);
+    text-transform: capitalize;
+    border: 1px solid hsl(0, 0%, 90%);
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 1px 1px 0px inset hsl(0, 0%, 85%);
+    transition: border 140ms ease-out;
+}
+#control .control .description::placeholder{
+    color: hsl(0, 0%, 55%);
+}
+#control .control .description:focus{
+    border: 1px solid hsl(280, 2%, 55%);
+}
+#control .control .value{
+    width: 100px;
+    padding: .6rem .8rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: normal;
+    font-weight: 400;
+    color: hsl(0, 0%, 25%);
+    text-transform: capitalize;
+    border: 1px solid hsl(0, 0%, 90%);
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 1px 1px 0px inset hsl(0, 0%, 85%);
+    transition: border 140ms ease-out;
+}
+#control .control .value:focus{
+    border: 1px solid hsl(280, 2%, 55%);
+}
+
+#control .control .valid{
+    position: relative;
+     width: 36px;
+     border: none;
+     background-color: transparent;
+     cursor: pointer;
+     margin-left: 8px;
+}
+button.valid:active{
+    transform: translateY(1px);
+    opacity: .8;
+}
+
+#control .control .valid img{
+    position: relative;
+    transform: scale(1);
+    width: 36px;
+    height: auto;
+    user-select: none;
+}
+#control .control .valid img::after{
+     content: "Validate";
+     position: absolute;
+     width: 64px;
+     height: 32px;
+     padding: 8px;
+     background-color: hsl(151, 43%, 68%);
+     border-radius: 2px;
+     color: hsl(0, 0%, 92%);
+     text-shadow: 1px 1px 2px hsl(0, 0%, 40%);
+     left: 100%;
+     bottom: 94%;
+     box-shadow: 1px 1px 3px  hsl(151, 32%, 28%);
+     user-select: none;
+     cursor:default;
+     filter: opacity(0);
+     transition: filter 260ms ease-in;
+}
+#control .control .valid:hover::after{
+     filter: opacity(1);
+}
+
+/*//TODO:: Styling Tables */
+#display-bottom{
+    padding-top: 2.4rem;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+   flex-wrap: nowrap;
+   gap: -100px;
+    
+}
+#i-table.hide-table{
+    filter: opacity(0);
+}
+.income-table{
+    
+    flex: 1 0 50%;
+    margin-left: 10%;
+    filter: opacity(1);
+}
+#e-table.hide-table{
+    filter: opacity(0);
+}
+.expenses-table{
+    flex: 1 1 50%;
+    filter: opacity(1);
+}
+table{
+    width: 460px;
+    border-collapse: collapse;
+}
+
+.income-head{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(179, 100%, 36%);   
+}
+.expenses-head{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsl(0, 100%, 49%);
+}
+table tr:nth-child(2n+3){
+    background-color: hsl(0, 0%, 95%);
+    box-shadow: 1px 1px 2px inset hsl(0, 0%, 89%);
+}
+td{
+    font-family: 'Roboto', sans-serif;
+    font-size: .88rem;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    color: hsl(0, 0%, 32%);
+    border-bottom: .5px solid hsl(0, 0%, 88%);
+    padding: .8rem;
+    padding-left: 0;
+}
+
+td .element{
+    position: relative;
+    padding: 0px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inc{
+    color: hsl(179, 100%, 36%);   
+}
+.exp{
+    color: hsl(0, 100%, 48%);
+}
+.delete{
+    display: none;
+    opacity: 0;
+    width: 16px;
+    height: auto;
+    cursor: pointer;
+}
+td .element:hover .element-value ~ .delete{
+    display: block;
+    animation: scale linear 300ms;
+    opacity: .85;
+}
+@keyframes scale {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
